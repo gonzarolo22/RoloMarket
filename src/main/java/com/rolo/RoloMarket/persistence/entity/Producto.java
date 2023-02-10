@@ -15,11 +15,14 @@ public class Producto {
     @Column(name = "id_categoria")   // pongo esta anotacion con el name(nombre real de la columna) cuando la variable se nombra distinto a la columna.
     private Integer idCategoria;
 
-    private String codigo_barras;
+    @Column(name = "codigo_barras")
+    private String codigoBarras;
 
-    private Double precio_venta;
+    @Column(name = "precio_venta")
+    private Double precioVenta;
 
-    private Integer cantidad_stock;
+    @Column(name = "cantidad_stock")
+    private Integer cantidadStock;
 
     private Boolean estado;
 
@@ -47,28 +50,28 @@ public class Producto {
         this.idCategoria = idCategoria;
     }
 
-    public String getCodigo_barras() {
-        return codigo_barras;
+    public String getCodigoBarras() {
+        return codigoBarras;
     }
 
-    public void setCodigo_barras(String codigo_barras) {
-        this.codigo_barras = codigo_barras;
+    public void setCodigoBarras(String codigoBarras) {
+        this.codigoBarras = codigoBarras;
     }
 
-    public Double getPrecio_venta() {
-        return precio_venta;
+    public Double getPrecioVenta() {
+        return precioVenta;
     }
 
-    public void setPrecio_venta(Double precio_venta) {
-        this.precio_venta = precio_venta;
+    public void setPrecioVenta(Double precioVenta) {
+        this.precioVenta = precioVenta;
     }
 
-    public Integer getCantidad_stock() {
-        return cantidad_stock;
+    public Integer getCantidadStock() {
+        return cantidadStock;
     }
 
-    public void setCantidad_stock(Integer cantidad_stock) {
-        this.cantidad_stock = cantidad_stock;
+    public void setCantidadStock(Integer cantidadStock) {
+        this.cantidadStock = cantidadStock;
     }
 
     public Boolean getEstado() {
