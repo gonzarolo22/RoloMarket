@@ -2,6 +2,8 @@ package com.rolo.RoloMarket.persistence.entity;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "categoria")
 public class Categoria {
@@ -17,6 +19,9 @@ public class Categoria {
     public Integer getCategoriaId() {
         return categoriaId;
     }
+
+    @OneToMany(mappedBy = "idCategoria")
+    private List<Producto>productos;
 
     public void setCategoriaId(Integer categoriaId) {
         this.categoriaId = categoriaId;
