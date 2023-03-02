@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "compras")
@@ -24,6 +25,9 @@ public class Compras {
     @ManyToOne
     @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
     private Clientes clientes;
+
+    @OneToMany(mappedBy = "producto")
+    private List<CompraProducto> compraProductos;
 
     public Integer getIdCompra() {
         return idCompra;

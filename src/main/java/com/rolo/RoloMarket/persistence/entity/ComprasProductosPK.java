@@ -5,8 +5,8 @@ import jakarta.persistence.Embeddable;
 
 import java.io.Serializable;
 
-@Embeddable
-public class ComprasProductosPK implements Serializable {
+@Embeddable // Para usar la anotación @EmbeddedId en Spring, se debe definir una clase incrustada que represente la clave primaria compuesta y anotarla con @Embeddable.
+public class ComprasProductosPK implements Serializable  {   // que es Serializable?
     @Column(name = "id_compra")
     private Integer idCompra;
 
