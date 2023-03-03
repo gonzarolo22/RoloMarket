@@ -8,13 +8,24 @@ public class Products {
     private int stock;
     private Boolean status;
 
-    public Products(int products_id, String name, int idCategory, int price, int stock, Boolean status) {
+    private Category category;
+
+    public Products(int products_id, String name, int idCategory, int price, int stock, Boolean status, Category category) {
         this.products_id = products_id;
         this.name = name;
         this.idCategory = idCategory;
         this.price = price;
         this.stock = stock;
         this.status = status;
+        this.category = category;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 
     public int getProducts_id() {

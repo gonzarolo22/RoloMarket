@@ -12,7 +12,7 @@ public class Categoria {
     @Column(name = "categoria_id")
     private Integer categoriaId;
 
-    private String description;
+    private String descripcion;
 
     private Boolean estado;
 
@@ -29,11 +29,11 @@ public class Categoria {
         return categoriaId;
     }
     public String getDescription() {
-        return description;
+        return descripcion;
     }
 
     public void setDescription(String description) {
-        this.description = description;
+        this.descripcion = description;
     }
 
     public Boolean getEstado() {
