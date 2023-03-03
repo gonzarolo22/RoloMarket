@@ -16,9 +16,7 @@ public class Categoria {
 
     private Boolean estado;
 
-    public Integer getCategoriaId() {
-        return categoriaId;
-    }
+
 
     @OneToMany(mappedBy = "idCategoria")
     private List<Producto>productos;
@@ -27,6 +25,9 @@ public class Categoria {
         this.categoriaId = categoriaId;
     }
 
+    public Integer getCategoriaId() {
+        return categoriaId;
+    }
     public String getDescription() {
         return description;
     }
