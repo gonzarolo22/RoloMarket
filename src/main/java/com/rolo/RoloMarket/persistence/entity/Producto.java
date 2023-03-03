@@ -3,7 +3,7 @@ package com.rolo.RoloMarket.persistence.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "productos")
+@Table(name = "producto")
 public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -29,6 +29,20 @@ public class Producto {
     @ManyToOne
     @JoinColumn(name = "id_categoria",insertable = false, updatable = false)
     private Categoria categoria;
+
+    public Producto() {
+    }
+
+    public Producto(Integer id_producto, String nombre, Integer idCategoria, String codigoBarras, Double precioVenta, Integer cantidadStock, Boolean estado, Categoria categoria) {
+        this.id_producto = id_producto;
+        this.nombre = nombre;
+        this.idCategoria = idCategoria;
+        this.codigoBarras = codigoBarras;
+        this.precioVenta = precioVenta;
+        this.cantidadStock = cantidadStock;
+        this.estado = estado;
+        this.categoria = categoria;
+    }
 
     public Categoria getCategoria() {
         return categoria;

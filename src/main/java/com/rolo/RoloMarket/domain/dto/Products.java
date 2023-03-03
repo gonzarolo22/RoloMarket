@@ -10,16 +10,6 @@ public class Products {
 
     private Category category;
 
-    public Products(int products_id, String name, int idCategory, int price, int stock, Boolean status, Category category) {
-        this.products_id = products_id;
-        this.name = name;
-        this.idCategory = idCategory;
-        this.price = price;
-        this.stock = stock;
-        this.status = status;
-        this.category = category;
-    }
-
     public Category getCategory() {
         return category;
     }

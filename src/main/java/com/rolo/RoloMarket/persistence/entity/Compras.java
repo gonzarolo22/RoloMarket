@@ -26,8 +26,24 @@ public class Compras {
     @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
     private Clientes clientes;
 
-    @OneToMany(mappedBy = "producto")
+    @OneToMany(mappedBy = "compras")
     private List<CompraProducto> compraProductos;
+
+    public Clientes getClientes() {
+        return clientes;
+    }
+
+    public void setClientes(Clientes clientes) {
+        this.clientes = clientes;
+    }
+
+    public List<CompraProducto> getCompraProductos() {
+        return compraProductos;
+    }
+
+    public void setCompraProductos(List<CompraProducto> compraProductos) {
+        this.compraProductos = compraProductos;
+    }
 
     public Integer getIdCompra() {
         return idCompra;

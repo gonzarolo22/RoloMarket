@@ -7,11 +7,7 @@ public class Category {
     private String description;
     private Boolean status;
 
-    public Category(int categoryId, String description, Boolean status) {
-        this.categoryId = categoryId;
-        this.description = description;
-        this.status = status;
-    }
+
 
     public int getCategoryId() {
         return categoryId;
