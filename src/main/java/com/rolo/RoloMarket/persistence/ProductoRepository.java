@@ -5,13 +5,16 @@ import com.rolo.RoloMarket.domain.repository.ProductRepository;
 import com.rolo.RoloMarket.persistence.Mapper.ProductMapper;
 import com.rolo.RoloMarket.persistence.crud.ProductoCrudRepository;
 import com.rolo.RoloMarket.persistence.entity.Producto;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 @Repository
 public class ProductoRepository implements ProductRepository {
+    @Autowired
     private ProductoCrudRepository productoCrudRepository;
+    @Autowired
     private ProductMapper productMapper;
 
     public List<Products> getAll(){
@@ -46,10 +49,10 @@ public class ProductoRepository implements ProductRepository {
 
     @Override
     public void delete(int productId) {
-
+        productoCrudRepository.deleteById(productId);
     }
 
-
+/*
     public Optional<Producto> getById(Integer id){
         return productoCrudRepository.findById(id);
     }
@@ -66,7 +69,7 @@ public class ProductoRepository implements ProductRepository {
 
 
     //este es el metodo query creado en ProductoCrudRepository
-  /*  public List<Producto>getAllCategoriaId(int idCategoria){
+   public List<Producto>getAllCategoriaId(int idCategoria){
         return productoCrudRepository.findByIdCategoriaOrderByNombreAsc(idCategoria);
     }
   */
