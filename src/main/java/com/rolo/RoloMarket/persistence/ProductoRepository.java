@@ -38,7 +38,7 @@ public class ProductoRepository implements ProductRepository {
     public Optional<Products> getProducts(int productsId) {
         Optional<Producto> forId= productoCrudRepository.findById(productsId);
 
-        return Optional.of(productMapper.toProducts(forId));
+        return Optional.of(productMapper.toProducts(forId.get()));
     }
 
     @Override
