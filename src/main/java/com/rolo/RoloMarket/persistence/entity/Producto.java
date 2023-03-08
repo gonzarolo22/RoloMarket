@@ -3,7 +3,7 @@ package com.rolo.RoloMarket.persistence.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "producto")
+@Table(name = "productos")
 public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
