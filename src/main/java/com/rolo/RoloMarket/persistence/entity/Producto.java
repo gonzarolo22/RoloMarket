@@ -10,10 +10,9 @@ public class Producto {
     @Column(name = "id_producto", nullable = false, unique = true)
     private Integer id_producto;
 
-    private String nombre;
-
     @Column(name = "id_categoria")   // pongo esta anotacion con el name(nombre real de la columna) cuando la variable se nombra distinto a la columna.
     private Integer idCategoria;
+    private String nombre;
 
     @Column(name = "codigo_barras")
     private String codigoBarras;
