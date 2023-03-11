@@ -24,12 +24,25 @@ public class ProductsController {
 
     @GetMapping("/{id}")
     Optional<Products> getForId(@PathVariable Integer id){
-        return productsService.getProducts(id);
+        return productsService.getProductsId(id);
     }
 
-    @PostMapping
-    Products save(Products products){
+    @GetMapping("/category/{id}")
+    Optional<List<Products>>getForCategory(@PathVariable Integer categoryId){
+        return productsService.getByCategory(categoryId);
+    }
+    @PostMapping("/save")
+    Products save(@RequestBody Products products){
         return productsService.save(products);
     }
+
+    @DeleteMapping("/delete/{id}")
+    void delete(@PathVariable Integer id){
+        productsService.delete(id);
+    }
+
+
+
+
 
 }

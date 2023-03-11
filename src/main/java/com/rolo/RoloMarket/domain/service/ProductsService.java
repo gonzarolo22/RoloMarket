@@ -21,7 +21,7 @@ public class ProductsService {
     public Optional<List<Products>> getByCategory(int categoryId){
         return productRepository.getByCategory(categoryId);
     }
-    public Optional<Products>getProducts(int productsId){
+    public Optional<Products>getProductsId(int productsId){
         return productRepository.getProducts(productsId);
     }
     public Products save(Products products){
