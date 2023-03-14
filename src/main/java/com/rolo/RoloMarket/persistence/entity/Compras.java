@@ -17,7 +17,7 @@ public class Compras {
     @Column(name = "id_cliente")
     private Integer idCliente;
 
-    private LocalDateTime Fecha;
+    private LocalDateTime fecha;
     private String medio_pago;
     private String comentario;
     private String estado;

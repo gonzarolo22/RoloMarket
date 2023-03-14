@@ -8,7 +8,7 @@ import java.util.List;
 public class Purchase {
     private int idPurchase;
     private  int idClient;
-    private LocalDate fecha;
+    private LocalDate date;
     private String buy;
     private String comentary;
     private String status;
@@ -30,8 +30,8 @@ public class Purchase {
         return idClient;
     }
 
-    public LocalDate getFecha() {
-        return fecha;
+    public LocalDate getDate() {
+        return date;
     }
 
     public String getBuy() {
@@ -55,7 +55,7 @@ public class Purchase {
     }
 
     public void setFecha(LocalDate fecha) {
-        this.fecha = fecha;
+        this.date = fecha;
     }
 
     public void setBuy(String buy) {
