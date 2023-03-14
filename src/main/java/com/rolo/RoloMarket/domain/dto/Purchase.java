@@ -11,7 +11,7 @@ public class Purchase {
     private String buy;
     private String comentary;
     private String status;
-    private Client client;
+    private Clients client;
 
     public int getIdPurchase() {
         return idPurchase;
