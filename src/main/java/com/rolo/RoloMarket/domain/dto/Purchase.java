@@ -37,7 +37,7 @@ public class Purchase {
         return status;
     }
 
-    public Client getClient() {
+    public Clients getClient() {
         return client;
     }
 }
