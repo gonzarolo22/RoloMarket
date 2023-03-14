@@ -8,6 +8,7 @@ public class Clients {
     private String address;
     private String email;
 
+
     public Integer getIdClients() {
         return idClients;
     }

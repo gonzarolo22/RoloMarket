@@ -3,6 +3,7 @@ package com.rolo.RoloMarket.domain.dto;
 import com.rolo.RoloMarket.persistence.entity.Clientes;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class Purchase {
     private int idPurchase;
@@ -11,7 +12,15 @@ public class Purchase {
     private String buy;
     private String comentary;
     private String status;
-    private Clients client;
+    private List<PurchaseItem> purchaseItems;
+
+    public List<PurchaseItem> getPurchaseItems() {
+        return purchaseItems;
+    }
+
+    public void setPurchaseItems(List<PurchaseItem> purchaseItems) {
+        this.purchaseItems = purchaseItems;
+    }
 
     public int getIdPurchase() {
         return idPurchase;
@@ -37,7 +46,27 @@ public class Purchase {
         return status;
     }
 
-    public Clients getClient() {
-        return client;
+    public void setIdPurchase(int idPurchase) {
+        this.idPurchase = idPurchase;
+    }
+
+    public void setIdClient(int idClient) {
+        this.idClient = idClient;
+    }
+
+    public void setFecha(LocalDate fecha) {
+        this.fecha = fecha;
+    }
+
+    public void setBuy(String buy) {
+        this.buy = buy;
+    }
+
+    public void setComentary(String comentary) {
+        this.comentary = comentary;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }
